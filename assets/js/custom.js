@@ -643,5 +643,16 @@ Assigned to: ThemeForest
 		$(".status").fadeOut(1800);
 		$(".preloader").delay(1000).fadeOut("slow");
 	});
-		
+
 }(jQuery));	
+
+const btn = document.querySelector('.join-button');
+btn.addEventListener('mouseover', mouseover);
+
+function mouseover() {
+	const i = Math.floor(Math.random() * (87 - 7 + 1) ) + 7;
+	const j = Math.floor(Math.random() * (96 - 4 + 1) ) + 4;
+
+	btn.style.left = `${i}%`;
+	btn.style.top = `${j}%`;
+}
