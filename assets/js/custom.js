@@ -646,13 +646,31 @@ Assigned to: ThemeForest
 
 }(jQuery));	
 
+
 const btn = document.querySelector('.join-button');
+const parent = document.querySelector('.banner_content');
+
 btn.addEventListener('mouseover', mouseover);
+btn.addEventListener('click', mouseover);
 
 function mouseover() {
-	const i = Math.floor(Math.random() * (87 - 7 + 1) ) + 7;
-	const j = Math.floor(Math.random() * (96 - 4 + 1) ) + 4;
+	const parentRect = parent.getBoundingClientRect();
 
-	btn.style.left = `${i}%`;
-	btn.style.top = `${j}%`;
+  const leftMax = parentRect.width - btn.offsetWidth;
+  const topMax = parentRect.height - btn.offsetHeight;
+  
+  const left = Math.floor(Math.random() * (leftMax + 1));
+  const top = Math.floor(Math.random() * (topMax + 1));
+
+	btn.style.setProperty('--left', `${left}px`);
+	btn.style.setProperty('--top', `${top}px`);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+	const parentRect = parent.getBoundingClientRect();
+	const leftMax = parentRect.width - btn.offsetWidth;
+  const topMax = parentRect.height - btn.offsetHeight;
+	btn.style.setProperty('--left', `${leftMax / 2}px`);
+	btn.style.setProperty('--top', `${topMax / 2}px`);
+});
+

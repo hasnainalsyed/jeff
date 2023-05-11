@@ -734,9 +734,8 @@ transform: translate(-50%,-50%);
 }
 .port_banner_wrapper .banner_content .join-button {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: var(--left);
+    top: var(--top);
 }
 .port_banner_wrapper .bannner_leftpart {
 	-webkit-transition: all 1s;
@@ -2941,7 +2940,7 @@ h2.project_heading:after {
     margin-left: 0;
 }
 .port_banner_wrapper .banner_content {
-    padding-left: 160px;
+    margin-left: 110px;
 }
 .bannner_leftpart .banner_name {
     font-size: 65px;
@@ -3134,7 +3133,7 @@ h2.project_heading:after {
     height: 315px;
 }
 .port_banner_wrapper .banner_content {
-    padding-left: 25px;
+    margin-left: 25px;
 }
 .bannner_leftpart h2.stranger {
     font-size: 25px;
@@ -3430,7 +3429,7 @@ p.banner_pera {
     margin-bottom: 50px;
 }
 .port_banner_wrapper .banner_content {
-    padding-left: 0;
+    margin-left: 0;
 }
 .bannner_leftpart h2.stranger {
     font-size: 20px;
